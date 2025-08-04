@@ -1,9 +1,9 @@
 import React from 'react'
-import Banner from '../../components/Banner'
+import Head from '../../components/Head'
 
 export default function Home() {
     return (
         <>
-            <Banner />
+            <Head />
         </>)
 }

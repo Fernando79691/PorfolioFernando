@@ -1,7 +1,7 @@
 :root {
-  --font-principal: font-family: "Sora", sans-serif;
-  --font-secundaria: font-family: "ADLaM Display", system-ui;
-  --cor-backgrount: #f2f2f3;
+  --font-principal: "Sora", sans-serif;
+  --font-secundaria: "ADLaM Display", system-ui;
+  --cor-backgrount: #f0f0f0;
   --branco: #fff;
   --preto: #000;
   --cor-botao: #7c44ec;
@@ -14,5 +14,5 @@
 
 body {
   margin: 0;
-  background-color: (var(--cor-backgrount));
+  background-color: var(--cor-backgrount);
 }
