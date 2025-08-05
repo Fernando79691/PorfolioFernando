@@ -21,7 +21,7 @@ const HeadContainer = styled.section`
 
     h2 {
          margin: 15px 15px;
-         font-size: 18px;
+         font-size: 15px;
     }
 
     a {
@@ -47,7 +47,7 @@ const HeadContainer = styled.section`
     }
 
     h2 {
-      font-size: 20px;
+      font-size: 18px;
       margin-right: 30px;
     }
 
@@ -59,13 +59,13 @@ const HeadContainer = styled.section`
 `;
 
 export default function Head() {
-    return (
-        <HeadContainer>
-            <img src={perfil} />
-            <h2>Fernando</h2>
-            <a href="">Sobre</a>
-            <a href="">Projetos</a>
-            <a href="">Contato</a>
-        </HeadContainer>
-    )
+  return (
+    <HeadContainer>
+      <img src={perfil} />
+      <h2>FERNANDO</h2>
+      <a href="">SOBRE</a>
+      <a href="">PROJETOS</a>
+      <a href="">CONTATO</a>
+    </HeadContainer>
+  )
 }
