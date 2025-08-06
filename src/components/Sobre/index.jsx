@@ -3,8 +3,57 @@ import styled from "styled-components";
 
 const SobreContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   padding: 2rem;
+  text-align: center;
+  margin-top: -140px;
+  margin-left: 10px;
+
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 15px;
+        margin-bottom: 2rem;
+        max-width: 600px;
+    }
+
+    button {
+        padding: 10px 20px;
+        height: 60px;
+        width: 250px;
+        font-size: 1rem;
+        background-color: #7c44ec;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #5a2dbf;
+        }
+    }
+
+    @media (min-width: 768px) {
+        h1 {
+        font-size: 60px;
+        margin-bottom: 1rem;
+        }
+
+        h3 {
+        font-size: 20px;
+        }
+
+        button {
+        font-size: 1rem;
+        }
+    }
 `;
 
 const BarraSocial = styled.div`
@@ -12,7 +61,7 @@ const BarraSocial = styled.div`
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  background-color: #fff;
+  background-color: var(--branco);
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -39,12 +88,6 @@ export default function Sobre() {
                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin />
                     </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                        <FaTwitter />
-                    </a>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-                        <FaYoutube />
-                    </a>
                     <a href="https://github.com" target="_blank" rel="noopener noreferrer">
                         <FaGithub />
                     </a>
@@ -53,9 +96,9 @@ export default function Sobre() {
                     </a>
                 </BarraSocial>
 
-                <h1>Sobre mim</h1>
-                <h3>Desenvolvedor em transição de carreira</h3>
-                <button>Saiba mais</button>
+                <h1>FERNANDO MARTINS</h1>
+                <h3>Desenvolvedor web que cria e gerencia sites e aplicativos da web que levam ao sucesso seu produto</h3>
+                <button>PROJETOS</button>
             </SobreContainer>
         </>
     )

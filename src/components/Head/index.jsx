@@ -20,13 +20,13 @@ const HeadContainer = styled.section`
     }
 
     h2 {
-         margin: 15px 15px;
-         font-size: 15px;
+         margin: 15px 5px;
+         font-size: 12px;
     }
 
     a {
-        margin: 10px;
-        font-size: 12px;
+        margin: 10px 10px;
+        font-size: 10px;
         font-weight: 700;
         color: var(--preto);
         text-decoration: none;
