@@ -6,11 +6,12 @@ const SobreContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   padding: 2rem;
   text-align: center;
-  margin-top: -140px;
+  margin-top: -80px;
   margin-left: 10px;
+  font-family: var(--font-principal);
 
 
     h1 {
@@ -22,6 +23,7 @@ const SobreContainer = styled.div`
         font-size: 15px;
         margin-bottom: 2rem;
         max-width: 600px;
+        font-weight: 300;
     }
 
     button {
@@ -34,6 +36,7 @@ const SobreContainer = styled.div`
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        font-weight: 100;
 
         &:hover {
             background-color: #5a2dbf;
