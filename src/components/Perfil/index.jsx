@@ -45,16 +45,87 @@ const Cabecalho = styled.div`
 `;
 
 const Conteudo = styled.div`
-    
+    display: flex;
+    justify-content: space-between;
+    margin-top: -100px;
+
+    @media (max-width: 768px) {
+        flex-direction: column; /* Empilha os elementos */
+        align-items: center; /* Centraliza no mobile */
+        margin-top: 20px;
+    }
 `;
 
 const Desenvolvimento = styled.div`
+    margin-left: 100px;
 
+    h3 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 15px;
+        margin-bottom: 1px;
+    }
+
+    button {
+        padding: 10px 20px;
+        height: 50px;
+        width: 150px;
+        font-size: 1rem;
+        background-color: #7c44ec;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 100;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+        margin-left: 0; /* Remove recuo no mobile */
+        text-align: center;
+    }
 `;
 
 const Cards = styled.div`
+    margin-right: 400px;
+    margin-left: -50px;
+    
+    h3 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
 
+    .skills-list {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-auto-rows: min-content;
+    }
+
+    .skills-list p {
+        margin: 8px;
+        border: 2px solid #ccc; 
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .skills-list p:nth-child(n+6) {
+        grid-column: 2;
+    }
+
+    @media (max-width: 768px) {
+        margin: 20px 0 0 0; /* Espaçamento no mobile */
+        margin-right: 0;
+        margin-left: 0;
+        .skills-list {
+            grid-template-columns: 1fr; /* Uma coluna no mobile */
+        }
+    }
 `;
+
 
 export default function Perfil() {
     return (
@@ -69,26 +140,26 @@ export default function Perfil() {
             <Conteudo>
                 <Desenvolvimento>
                     <h3>Conheça</h3>
-                    <p>
-                        Transição de carreira para Tecnologia | Desenvolvimento Web.<br />
-                        Atualmente focado em Desenvolvimento Front-End com ênfase <br />em JavaScript, React, HTML, CSS e lógica de programação.<br />
-                        Mantenho uma rotina de estudos, prática com projetos próprios e <br />atualização constante sobre as tendências da área.<br />
-                        Confira alguns dos meus trabalhos na seção Projetos.<br />
-                        Sinta-se à vontade para se conectar e falar comigo<br /> ou me seguir no meu Linkedin e Instagram,
-                        onde publico conteúdo útil<br /> relacionado a Desenvolvimento Web e Programação.
-                    </p>
-                    <button>Contato</button>
+                    <p>Transição de carreira para Tecnologia | Desenvolvimento Web.</p><br />
+                    <p>Atualmente focado em Desenvolvimento Front-End com ênfase <br />em JavaScript, React, HTML, CSS e lógica de programação.</p><br />
+                    <p>Mantenho uma rotina de estudos, prática com projetos próprios e <br />atualização constante sobre as tendências da área.</p><br />
+                    <p>Confira alguns dos meus trabalhos na seção Projetos.</p><br />
+                    <p>Sinta-se à vontade para se conectar e falar comigo<br /> ou me seguir no meu Linkedin e Instagram,
+                        onde publico conteúdo útil<br /> relacionado a Desenvolvimento Web e Programação.</p>
+                    <button>CONTATO</button>
                 </Desenvolvimento>
 
                 <Cards>
                     <h3>Skills</h3>
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>JavaScript</p>
-                    <p>ReactJS</p>
-                    <p>GIT</p>
-                    <p>Github</p>
-                    <p>Mobile First</p>
+                    <div className='skills-list'>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JavaScript</p>
+                        <p>ReactJS</p>
+                        <p>GIT</p>
+                        <p>Github</p>
+                        <p>Mobile First</p>
+                    </div>
                 </Cards>
             </Conteudo>
         </PerfilContainer>
