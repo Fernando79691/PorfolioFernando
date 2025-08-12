@@ -2,78 +2,65 @@ import React from 'react'
 import styled from 'styled-components'
 
 const PerfilContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    background-color: var(--cor-backgrount);
     font-family: var(--font-principal);
 
 `;
 
 const Cabecalho = styled.div`
-    text-align: center;
-    margin-bottom: 50px;
-`;
-
-const Conteudo = styled.div`
     display: flex;
-    align-items: flex-start;
-    margin-right: 150px;
-    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 2rem;
+    text-align: center;
+    margin-top: -200px;
+    margin-left: 12px;
+
     h3 {
-        text-align: center;
-    
+        position: relative;
+        display: inline-block;
+        padding-top: 20px;
+        font-size: 40px;
+        margin-bottom: 1rem;
+        font-weight: 500;
+    }
+
+    h3::before {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: var(--cor-botao);
+        margin: 0 auto 10px auto;
+
     }
 
     p {
-        text-align: center;
-
+        font-size: 15px;
+        margin-bottom: 2rem;
+        max-width: 600px;
+        font-weight: 300;
     }
+`;
 
-    button {
-        padding: 10px 20px;
-        height: 60px;
-        width: 150px;
-        font-size: 1rem;
-        background-color: #7c44ec;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: 100;
-        margin-left: 200px;
-    }
-
-
-    /* Responsivo para telas pequenas */
-    @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: stretch;
-    }
+const Conteudo = styled.div`
+    
 `;
 
 const Desenvolvimento = styled.div`
-    flex: 2;
-    text-align: left;
+
 `;
 
 const Cards = styled.div`
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    text-align: right;
 
-    /* Centralizar no mobile */
-    @media (max-width: 768px) {
-        text-align: center;
-    }
 `;
 
 export default function Perfil() {
     return (
         <PerfilContainer>
             <Cabecalho>
-                <h3>Sobre mim</h3>
+                <h3>SOBRE MIM</h3>
                 <p>
                     Aqui você encontrará mais informações, o que estou fazendo, minhas habilidades atuais.
                 </p>
