@@ -50,8 +50,8 @@ const Conteudo = styled.div`
     margin-top: -100px;
 
     @media (max-width: 768px) {
-        flex-direction: column; /* Empilha os elementos */
-        align-items: center; /* Centraliza no mobile */
+        flex-direction: column; 
+        align-items: center; 
         margin-top: 20px;
     }
 `;
