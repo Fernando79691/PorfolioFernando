@@ -61,11 +61,20 @@ const Desenvolvimento = styled.div`
 
     h3 {
         font-size: 25px;
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
     }
 
     p {
         font-size: 15px;
         margin-bottom: 1px;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+            margin-left: 40px;
+        }
     }
 
     button {
@@ -95,6 +104,10 @@ const Cards = styled.div`
     h3 {
         font-size: 25px;
         margin-bottom: 10px;
+
+        @media (max-width: 768px) {
+            margin-left: 10px;
+        }
     }
 
     .skills-list {
