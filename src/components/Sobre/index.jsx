@@ -75,30 +75,40 @@ const BarraSocial = styled.div`
     font-size: 24px;
     color: #000;
     transition: color 0.3s;
+    }
 
     &:hover {
-      color: #7c44ec; /* cor personalizada ao passar o mouse */
+      color: #7c44ec; 
     }
-  }
+
+    @media (max-width: 768px){
+        display: none !important; 
+        visibility: hidden;       
+        width: 0;                 
+        height: 0;                 
+        padding: 0;               
+        margin: 0;     
+    }
+    
 `;
 
 
 export default function Sobre() {
     return (
         <>
-            <SobreContainer>
-                <BarraSocial>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin />
-                    </a>
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                        <FaGithub />
-                    </a>
-                    <a href="https://seulink.com/livro" target="_blank" rel="noopener noreferrer">
-                        <FaBook />
-                    </a>
-                </BarraSocial>
+            <BarraSocial>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin />
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                    <FaGithub />
+                </a>
+                <a href="https://seulink.com/livro" target="_blank" rel="noopener noreferrer">
+                    <FaBook />
+                </a>
+            </BarraSocial>
 
+            <SobreContainer>
                 <h1>FERNANDO MARTINS</h1>
                 <h3>Desenvolvedor web que cria e gerencia sites e aplicativos da web que levam ao sucesso seu produto</h3>
                 <button>PROJETOS</button>
