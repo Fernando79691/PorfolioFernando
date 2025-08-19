@@ -105,73 +105,73 @@ const Button = styled.button`
 `;
 
 export default function Contato() {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: "",
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
     })
+  }
 
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-        })
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log("Form Data:", formData)
+    alert("Mensagem enviada!")
+    setFormData({ name: "", email: "", message: "" })
+  }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log("Form Data:", formData)
-        alert("Mensagem enviada!")
-        setFormData({ name: "", email: "", message: "" })
-    }
+  return (
+    <ContatoContainer>
+      <Cabecalho>
+        <h3>CONTATO</h3>
+        <p>
+          Sinta-se à vontade para entrar em contato comigo enviando o formulário
+          abaixo e entrarei em contato com você o mais breve possível.
+        </p>
+      </Cabecalho>
 
-    return (
-        <ContatoContainer>
-            <Cabecalho>
-                <h3>CONTATO</h3>
-                <p>
-                    Sinta-se à vontade para entrar em contato comigo enviando o formulário
-                    abaixo e entrarei em contato com você o mais breve possível.
-                </p>
-            </Cabecalho>
+      <FormContainer>
+        <form onSubmit={handleSubmit}>
+          <Label htmlFor="name">Nome</Label>
+          <Input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Digite seu Nome"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
 
-            <FormContainer>
-                <form onSubmit={handleSubmit}>
-                    <Label htmlFor="name">Nome</Label>
-                    <Input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Digite seu Nome"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                    />
+          <Label htmlFor="email">Email</Label>
+          <Input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite seu Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
 
-                    <Label htmlFor="email">Email</Label>
-                    <Input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Digite seu Email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
+          <Label htmlFor="message">Mensagem</Label>
+          <TextArea
+            id="message"
+            name="message"
+            placeholder="Digite sua Mensagem"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
 
-                    <Label htmlFor="message">Mensagem</Label>
-                    <TextArea
-                        id="message"
-                        name="message"
-                        placeholder="Digite sua Mensagem"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                    />
-
-                    <Button type="submit">Enviar</Button>
-                </form>
-            </FormContainer>
-        </ContatoContainer>
-    )
+          <Button type="submit">Enviar</Button>
+        </form>
+      </FormContainer>
+    </ContatoContainer>
+  )
 };
