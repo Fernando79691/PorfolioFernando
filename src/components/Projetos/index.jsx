@@ -135,7 +135,7 @@ const Projects = styled.div`
 export default function Projetos() {
     return (
         <>
-            <ProjetosContainer>
+            <ProjetosContainer id="projetos">
                 <Cabecalho>
                     <h3>PROJETOS</h3>
                     <p>Aqui você pode encontrar alguns dos projetos pessoais e para clientes</p>

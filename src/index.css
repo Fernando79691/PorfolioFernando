@@ -16,3 +16,7 @@ body {
   margin: 0;
   background-color: var(--cor-backgrount);
 }
+
+html {
+  scroll-behavior: smooth;
+}

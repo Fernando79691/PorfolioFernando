@@ -97,13 +97,13 @@ export default function Sobre() {
     return (
         <>
             <BarraSocial>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/fernandomartins--" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin />
                 </a>
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer">
                     <FaGithub />
                 </a>
-                <a href="https://seulink.com/livro" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/fernando.martins.filho?igsh=bmtjMHM1cWF5bTZv" target="_blank" rel="noopener noreferrer">
                     <FaBook />
                 </a>
             </BarraSocial>
@@ -111,7 +111,9 @@ export default function Sobre() {
             <SobreContainer>
                 <h1>FERNANDO MARTINS</h1>
                 <h3>Desenvolvedor web que cria e gerencia sites e aplicativos da web que levam ao sucesso seu produto</h3>
-                <button>PROJETOS</button>
+                <a href="#projetos">
+                    <button>PROJETOS</button>
+                </a>
             </SobreContainer>
         </>
     )
