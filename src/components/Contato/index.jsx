@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import emailjs from 'emailjs-com'
 
 const ContatoContainer = styled.div`
   font-family: var(--font-principal);
@@ -110,6 +111,7 @@ export default function Contato() {
     email: "",
     message: "",
   })
+  const [status, setStatus] = useState("")
 
   const handleChange = (e) => {
     setFormData({
@@ -120,9 +122,20 @@ export default function Contato() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("Form Data:", formData)
-    alert("Mensagem enviada!")
-    setFormData({ name: "", email: "", message: "" })
+
+    emailjs.send(
+      "service_w4l9eii",      // substitua pelo seu SERVICE ID
+      "template_v2h4rwi",     // substitua pelo seu TEMPLATE ID
+      formData,
+      "dDj8qQZqTiJYHd6qu"         // substitua pelo seu PUBLIC KEY
+    )
+      .then(() => {
+        setStatus("Mensagem enviada com sucesso ✅")
+        setFormData({ name: "", email: "", message: "" })
+      })
+      .catch(() => {
+        setStatus("Erro ao enviar ❌")
+      })
   }
 
   return (
@@ -171,6 +184,7 @@ export default function Contato() {
 
           <Button type="submit">Enviar</Button>
         </form>
+        {status && <p style={{ marginTop: "10px", color: "green" }}>{status}</p>}
       </FormContainer>
     </ContatoContainer>
   )
