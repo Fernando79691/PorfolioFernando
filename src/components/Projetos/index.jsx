@@ -149,7 +149,9 @@ export default function Projetos() {
                     <Projects>
                         <h5>Portfólio Pessoal</h5>
                         <p>Baseado no Dopefolio projeto Open-Source criado por Ram Maheshwari. Utilizando técnicas em HTML, CSS e Javascript.</p>
-                        <button>CASE STUDY</button>
+                        <a href="https://github.com/Fernando79691/PorfolioFernando" target="_blank" rel="noopener noreferrer">
+                            <button>PROJETO</button>
+                        </a>
                     </Projects>
                 </Wrapper>
 

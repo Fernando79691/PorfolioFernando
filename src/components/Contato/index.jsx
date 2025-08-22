@@ -126,7 +126,7 @@ export default function Contato() {
   }
 
   return (
-    <ContatoContainer>
+    <ContatoContainer id="contato">
       <Cabecalho>
         <h3>CONTATO</h3>
         <p>

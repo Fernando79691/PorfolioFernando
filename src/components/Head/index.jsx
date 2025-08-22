@@ -63,9 +63,9 @@ export default function Head() {
     <HeadContainer>
       <img src={perfil} />
       <h2>FERNANDO</h2>
-      <a href="">SOBRE</a>
-      <a href="">PROJETOS</a>
-      <a href="">CONTATO</a>
+      <a href="#sobre">SOBRE</a>
+      <a href="#projetos">PROJETOS</a>
+      <a href="#contato">CONTATO</a>
     </HeadContainer>
   )
 }

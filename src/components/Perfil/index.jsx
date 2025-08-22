@@ -142,7 +142,7 @@ const Cards = styled.div`
 
 export default function Perfil() {
     return (
-        <PerfilContainer>
+        <PerfilContainer id="sobre">
             <Cabecalho>
                 <h3>SOBRE MIM</h3>
                 <p>
@@ -159,7 +159,9 @@ export default function Perfil() {
                     <p>Confira alguns dos meus trabalhos na seção Projetos.</p><br />
                     <p>Sinta-se à vontade para se conectar e falar comigo<br /> ou me seguir no meu Linkedin e Instagram,
                         onde publico conteúdo útil<br /> relacionado a Desenvolvimento Web e Programação.</p>
-                    <button>CONTATO</button>
+                    <a href="#contato">
+                        <button>CONTATO</button>
+                    </a>
                 </Desenvolvimento>
 
                 <Cards>
